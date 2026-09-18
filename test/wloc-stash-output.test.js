@@ -60,7 +60,7 @@ async function executeAsStash(script) {
 }
 
 test("Stash response scripts return top-level response fields", async () => {
-  const script = await readFile(path.resolve(workerDir, "../dist/wloc.js"), "utf8");
+  const script = await readFile(path.resolve(workerDir, "dist/wloc.js"), "utf8");
   const payload = await executeAsStash(script);
 
   assert.equal(Object.hasOwn(payload, "response"), false);
